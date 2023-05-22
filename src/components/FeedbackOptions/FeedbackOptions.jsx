@@ -8,7 +8,10 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     <ButtonList>
       {options.map(nameButton => (
         <ButtonListItem key={nameButton}>
-          <Button type="button" onClick={() => onLeaveFeedback(nameButton)}>
+          <Button
+            type="button"
+            onClick={() => onLeaveFeedback({ type: nameButton, payload: 1 })}
+          >
             {firstLetterToUpperCase(nameButton)}
           </Button>
         </ButtonListItem>
